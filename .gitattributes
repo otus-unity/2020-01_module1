@@ -1,0 +1,16 @@
+* text=auto
+*.cs diff=csharp
+*.meta -text -crlf
+*.anim -text -crlf
+*.inputactions -text -crlf
+*.controller -text -crlf
+*.prefab -text -crlf
+*.preset -text -crlf
+*.terrainlayer -text -crlf
+*.physicMaterial -text -crlf
+*.mat -text -crlf
+*.asset -text -crlf
+*.unity -text -crlf
+*.mask -text -crlf
+/ProjectSettings/ProjectVersion.txt -text -crlf
+/Packages/manifest.json -text -crlf
