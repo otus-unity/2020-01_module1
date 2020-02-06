@@ -350,7 +350,7 @@ PrefabInstance:
     - target: {fileID: 7492144366031563836, guid: 9f6b6093c8242ac4bb871ec8bf4649c5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7492144366031563836, guid: 9f6b6093c8242ac4bb871ec8bf4649c5,
         type: 3}
@@ -372,6 +372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hooligan
       objectReference: {fileID: 0}
+    - target: {fileID: 7774034671165465722, guid: 9f6b6093c8242ac4bb871ec8bf4649c5,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 266321641}
     - target: {fileID: 8993794694277522125, guid: 9f6b6093c8242ac4bb871ec8bf4649c5,
         type: 3}
       propertyPath: m_IsActive
@@ -710,6 +715,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 592618153}
     m_Modifications:
+    - target: {fileID: 1397638194384045222, guid: ec4b6a0b6924a2e419f93c7a483c42f1,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 110117206}
     - target: {fileID: 2269517667082013920, guid: ec4b6a0b6924a2e419f93c7a483c42f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2238,6 +2248,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748148183007597303, guid: 2d3bdd141f8b8244e8db7b0ee8540ba3,
+        type: 3}
+      propertyPath: target
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3bdd141f8b8244e8db7b0ee8540ba3, type: 3}
