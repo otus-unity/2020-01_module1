@@ -27,6 +27,7 @@ public class Character : MonoBehaviour
     public float distanceFromEnemy;
     public Character target;
     public Weapon weapon;
+    public float damage;
     Animator animator;
     Vector3 originalPosition;
     Quaternion originalRotation;
@@ -40,8 +41,7 @@ public class Character : MonoBehaviour
         originalRotation = transform.rotation;
     }
 
-    [ContextMenu("Attack")]
-    void AttackEnemy()
+    public void AttackEnemy()
     {
         if (state != State.Idle || target.state == State.Dead)
             return;
@@ -56,6 +56,16 @@ public class Character : MonoBehaviour
                 state = State.BeginShoot;
                 break;
         }
+    }
+
+    public bool IsIdle()
+    {
+        return state == State.Idle;
+    }
+
+    public bool IsDead()
+    {
+        return state == State.Dead;
     }
 
     public void SetState(State newState)
@@ -139,6 +149,11 @@ public class Character : MonoBehaviour
 
     public void DoDamageToTarget()
     {
-        target.Die();
+        Health health = target.GetComponent<Health>();
+        if (health != null) {
+            health.ApplyDamage(damage);
+            if (health.current <= 0.0f)
+                target.Die();
+        }
     }
 }
