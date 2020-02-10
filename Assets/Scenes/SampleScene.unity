@@ -376,7 +376,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 266321641}
+      objectReference: {fileID: 1170247066}
     - target: {fileID: 8993794694277522125, guid: 9f6b6093c8242ac4bb871ec8bf4649c5,
         type: 3}
       propertyPath: m_IsActive
@@ -719,7 +719,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 110117206}
+      objectReference: {fileID: 2106040036}
     - target: {fileID: 2269517667082013920, guid: ec4b6a0b6924a2e419f93c7a483c42f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1993,6 +1993,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1094277055}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1170247066 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1397638194384045222, guid: ec4b6a0b6924a2e419f93c7a483c42f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 266321640}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a94f3f8b90d8e1499eaf072d5f74504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1190149068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2253,7 +2265,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1170247066}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3bdd141f8b8244e8db7b0ee8540ba3, type: 3}
 --- !u!4 &1306923270 stripped
@@ -3060,6 +3072,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2100777332}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2106040036 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7774034671165465722, guid: 9f6b6093c8242ac4bb871ec8bf4649c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 110117205}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a94f3f8b90d8e1499eaf072d5f74504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2120990058
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,17 +13,19 @@ public class Character : MonoBehaviour
         Attack,
         BeginShoot,
         Shoot,
+        Dead,
     }
 
     public enum Weapon
     {
         Pistol,
         Bat,
+        Fist,
     }
 
     public float runSpeed;
     public float distanceFromEnemy;
-    public Transform target;
+    public Character target;
     public Weapon weapon;
     Animator animator;
     Vector3 originalPosition;
@@ -41,8 +43,12 @@ public class Character : MonoBehaviour
     [ContextMenu("Attack")]
     void AttackEnemy()
     {
+        if (state != State.Idle || target.state == State.Dead)
+            return;
+
         switch (weapon) {
             case Weapon.Bat:
+            case Weapon.Fist:
                 state = State.RunningToEnemy;
                 break;
 
@@ -68,7 +74,7 @@ public class Character : MonoBehaviour
 
             case State.RunningToEnemy:
                 animator.SetFloat("speed", runSpeed);
-                if (RunTowards(target.position, distanceFromEnemy))
+                if (RunTowards(target.transform.position, distanceFromEnemy))
                     state = State.BeginAttack;
                 break;
 
@@ -80,7 +86,10 @@ public class Character : MonoBehaviour
 
             case State.BeginAttack:
                 animator.SetFloat("speed", 0.0f);
-                animator.SetTrigger("attack");
+                switch (weapon) {
+                    case Weapon.Bat: animator.SetTrigger("attack"); break;
+                    case Weapon.Fist: animator.SetTrigger("fistAttack"); break;
+                }
                 state = State.Attack;
                 break;
 
@@ -96,6 +105,9 @@ public class Character : MonoBehaviour
 
             case State.Shoot:
                 animator.SetFloat("speed", 0.0f);
+                break;
+
+            case State.Dead:
                 break;
         }
     }
@@ -117,5 +129,16 @@ public class Character : MonoBehaviour
 
         transform.position = targetPosition;
         return true;
+    }
+
+    public void Die()
+    {
+        animator.SetTrigger("died");
+        SetState(State.Dead);
+    }
+
+    public void DoDamageToTarget()
+    {
+        target.Die();
     }
 }
