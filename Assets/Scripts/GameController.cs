@@ -16,14 +16,14 @@ public class GameController : MonoBehaviour
     }
 
     [ContextMenu("Player Move")]
-    void PlayerMove()
+    public void PlayerMove()
     {
         if (waitingPlayerInput)
             waitingPlayerInput = false;
     }
 
     [ContextMenu("Switch character")]
-    void SwitchCharacter()
+    public void SwitchCharacter()
     {
         for (int i = 0; i < enemyCharacters.Length; i++) {
             // Найти текущего персонажа (i = индекс текущего)
